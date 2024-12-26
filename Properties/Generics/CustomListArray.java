@@ -28,6 +28,7 @@ public class CustomListArray{
 
     private void resize(){
         int[] temp = new int[data.length*2];
+        data = temp;
     }
 
     public int remove(){
@@ -58,11 +59,14 @@ public class CustomListArray{
     public static void main(String[] args){
         CustomListArray list = new CustomListArray();
 
-        list.add(5);
-        list.add(60);
-        list.add(42);
-        list.add(23);
+        // list.add(5);
+        // list.add(60);
+        // list.add(42);
+        // list.add(23);
 
+        for(int i=0;i<18;i++){
+            list.add(i*2);
+        }
         System.out.println(list);
     }
 }
